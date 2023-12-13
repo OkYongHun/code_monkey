@@ -1,0 +1,161 @@
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 24px;
+        text-align: center;
+        color: #eeeeee;
+    }
+    
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    #wrap {
+        width: 1300px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #e20f0fee;
+    }
+    
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: #d3b8b8;
+        line-height: 150px;
+    }
+    
+    #aside {
+        width: 30%;
+        height: 500px;
+        background-color: #ffffff;
+        line-height: 25px;
+        float: left;
+        overflow: hidden;
+        font-size: 1.5vw; /* vw 단위를 사용하여 상대적으로 조절 */
+        display: flex; /* Flexbox 사용 */
+        flex-direction: column; /* 세로 방향으로 나열 */
+    }
+    
+    #section {
+        width: 70%;
+        height: 500px;
+        background-color: #ffffff;
+        line-height: 30px;
+        float: right;
+    }
+    
+    #footer {
+        clear: both;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(255, 255, 255);
+        line-height: 27px;
+    }
+
+    #infolist {
+        clear: both;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(68, 2, 2);
+        line-height: 27px;
+    }
+    
+    #list {
+        height: 100%; /* #aside의 높이에 맞추기 위해 추가 */
+        flex: 1; /* 나머지 공간을 리스트가 차지하도록 함 */
+        overflow-y: auto;
+    }
+    
+    #list table {
+        width: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        line-height: 0; /* 리스트 간격을 조절하는 부분 */
+    }
+            
+    #list th,
+    #list td {
+        text-align: right; /* 테이블 셀 우측 정렬 */
+        white-space: nowrap;
+        padding: 0; /* 각 칸의 여백을 조절하는 부분 */
+        display: block;
+        height: 10px;
+        margin-bottom: 8px;
+    }
+    
+    #list tr {
+    display: block; /* 각 행을 블록 요소로 표시하여 한 줄씩 나오도록 설정 */
+    margin-bottom: 8px; /* 행 간격을 설정, 필요에 따라 조절하세요 */
+}
+
+    @media (max-width: 1500px) {
+        #wrap {
+            width: 95%
+        }
+    }
+    
+    @media (max-width: 768px) {
+        #wrap {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #header {
+            height: 300px;
+            line-height: 300px;
+        }
+    
+        #aside {
+            width: 100%;
+            height: 300px;
+            line-height: 5px;
+        }
+        #section, 
+        #footer {
+            width: 100%;
+            height: 300px;
+            line-height: 300px;
+        }
+
+        #buttonContainer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            flex-wrap: wrap; /버튼이 많으면 줄바꿈 코드 */
+        }
+        #list table {
+            font-size: 1.5vw;
+            width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            line-height: 1.5; /* 리스트 간격을 조절하는 부분 */
+}
+
+    
+        #list th,
+        #list td {
+            font-size: 1.5rem; /* 모바일 화면에서 글씨 크기 다시 조절 */
+            text-align: right;
+            white-space: nowrap;
+            display: block;
+            margin-bottom: 8px;
+            width: 100%;
+            height: 10px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 3px solid #000;
+        }
+        #list tr {
+        display: block;
+        margin-bottom: 8px;
+        line-height: 0.5; /* 간격을 적절히 조절하세요 */
+        }
+
+        
+    }
+</style>
